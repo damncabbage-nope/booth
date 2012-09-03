@@ -16,6 +16,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'ember-rails'
 
 group :development, :test do
   gem 'konacha' # Mocha, Chai
