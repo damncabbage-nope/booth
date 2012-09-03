@@ -15,9 +15,15 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+# Front-end
 gem 'jquery-rails'
 gem 'ember-rails'
+
+# Models
+#gem 'spree'
 
 group :development, :test do
   gem 'konacha' # Mocha, Chai
 end
+gem 'spree', '1.2.0'
+gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'
