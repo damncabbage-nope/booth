@@ -25,6 +25,10 @@ gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'
 # Testing
 group :development, :test do
   gem 'konacha' # Mocha, Chai
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
 end
 
 # Monitoring

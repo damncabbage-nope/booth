@@ -74,5 +74,11 @@ module Booth
 
     # Ember.js
     config.ember.variant = :development
+
+    # Development Generators
+    config.generators do |g|
+      g.test_framework :rspec, :fixture => true, :views => false
+      g.fixture_replacement :factory_girl, :dir => "spec/factories"
+    end
   end
 end
