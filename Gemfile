@@ -18,11 +18,11 @@ end
 gem 'jquery-rails'
 gem 'ember-rails'
 
-# Models
-#gem 'spree'
+# Spree
+gem 'spree', '1.2.0'
+gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'
 
+# Testing
 group :development, :test do
   gem 'konacha' # Mocha, Chai
 end
-gem 'spree', '1.2.0'
-gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'

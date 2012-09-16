@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/spree/spree_auth_devise
-  revision: 4846fb89c72fd7f50a9ff79ab7b6f16a204a80b5
+  revision: 99e8efaaf47dcf4e1917f7b4fabc85e71f7b081a
   specs:
     spree_auth_devise (1.0.0)
       cancan (= 1.6.7)
@@ -59,7 +59,7 @@ GEM
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
     bcrypt-ruby (3.0.1)
-    builder (3.0.0)
+    builder (3.0.3)
     cancan (1.6.7)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -84,6 +84,8 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
     deface (0.9.1)
       nokogiri (~> 1.5.0)
       rails (~> 3.1)
@@ -109,14 +111,14 @@ GEM
       multi_xml
     i18n (0.6.1)
     journey (1.0.4)
-    jquery-rails (2.1.1)
+    jquery-rails (2.1.2)
       railties (>= 3.1.0, < 5.0)
       thor (~> 0.14)
     json (1.7.5)
-    kaminari (0.14.0)
+    kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    konacha (1.5.0)
+    konacha (1.5.1)
       actionpack (~> 3.1)
       capybara
       colorize
@@ -141,6 +143,7 @@ GEM
       activerecord (>= 3.0.0)
       railties (>= 3.0.0)
     nokogiri (1.5.5)
+    open4 (1.3.0)
     orm_adapter (0.0.7)
     paperclip (2.7.0)
       activerecord (>= 2.3.0)
@@ -255,7 +258,7 @@ GEM
       rack (>= 1.0)
     xpath (0.1.4)
       nokogiri (~> 1.3)
-    zurb-foundation (3.0.9)
+    zurb-foundation (3.1.0)
       compass (>= 0.12.2)
       modular-scale (>= 1.0.2)
       rake
@@ -266,7 +269,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  compass
+  compass-rails
   ember-rails
   jquery-rails
   konacha
@@ -276,4 +279,4 @@ DEPENDENCIES
   spree_auth_devise!
   sqlite3
   uglifier (>= 1.0.3)
-  zurb-foundation (> 3.0.0)
+  zurb-foundation (~> 3.1)
