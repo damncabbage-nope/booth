@@ -26,3 +26,12 @@ gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'
 group :development, :test do
   gem 'konacha' # Mocha, Chai
 end
+
+# Monitoring
+group :development do
+  gem 'rack-perftools_profiler', :require => 'rack/perftools_profiler'
+end
+group :production do
+  gem 'newrelic_rpm'
+end
+

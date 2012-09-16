@@ -27,8 +27,6 @@ rerun.txt
 Thumbs.db
 .tmproj
 *.vi
-
-# Folders to ignore
 .CVS
 .hg
 .idea
@@ -39,3 +37,7 @@ Thumbs.db
 /node_modules
 /coverage/
 /spec/tmp/*
+
+# Project-specific ignores
+config/newrelic.yml
+

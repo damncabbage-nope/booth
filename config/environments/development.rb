@@ -34,4 +34,7 @@ Booth::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Profiler; visit ?profile=true to view the results
+  config.middleware.use ::Rack::PerftoolsProfiler, :default_printer => 'gif', :bundler => true
 end
