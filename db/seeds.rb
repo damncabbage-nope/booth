@@ -1,11 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# Events
 
-
-Spree::Core::Engine.load_seed if defined?(Spree::Core)
-Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+Event.create(
+  :name => 'SMASH! 2013',
+  :tagline => "Get in before the bastards knock down SCEC.",
+  :description => "SMASH! Sydney Manga and Anime Show is a Japanese pop culture convention that is devoted to artists, creators and fans alike.",
+  :sales_opened_at => 1.week.ago,
+  :sales_closed_at => 3.weeks.from_now,
+  :began_at    => '2013-08-10 09:00:00',
+  :finished_at => '2013-08-10 18:00:00'
+)
