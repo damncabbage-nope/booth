@@ -72,9 +72,6 @@ module Booth
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    # Ember.js
-    config.ember.variant = :development
-
     # Development Generators
     config.generators do |g|
       g.test_framework :rspec, :fixture => true, :views => false

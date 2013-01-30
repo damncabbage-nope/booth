@@ -16,7 +16,6 @@ end
 
 # Front-end
 gem 'jquery-rails'
-gem 'ember-rails'
 
 # Testing
 group :development, :test do
