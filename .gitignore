@@ -37,6 +37,8 @@ Thumbs.db
 /node_modules
 /coverage/
 /spec/tmp/*
+db/*.sqlite3
+/tmp
 
 # Project-specific ignores
 config/newrelic.yml
