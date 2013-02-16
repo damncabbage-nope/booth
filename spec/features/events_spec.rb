@@ -12,7 +12,7 @@ describe "Events" do
       end
 
       it "should take the customer to the event's page directly" do
-        current_path.should == events_path(open_event)
+        current_path.should == event_path(open_event)
       end
     end
 
