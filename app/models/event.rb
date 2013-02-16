@@ -8,4 +8,10 @@ class Event < ActiveRecord::Base
   # TODO: Date validation, sequence of dates, ie.
   #       sales_opened_at < :sales_closed_at < :began_at < :finished_at
 
+  ### Scopes
+
+  def self.active(now=Time.now)
+    where('finished_at > ?', now)
+  end
+
 end
