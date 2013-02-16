@@ -3,7 +3,15 @@ class EventsController < ApplicationController
 
   def index
     @events = events.all
-    respond_with(@events)
+    respond_with(@events) do |f|
+      f.html do
+        if @events.count == 1
+          redirect_to event_path(@events.first)
+        else
+          render :index
+        end
+      end
+    end
   end
 
   def show
