@@ -27,7 +27,7 @@ describe "Events" do
       end
 
       it "should display the future, active and closed events" do
-        page.should have_selector("ul.events > li", :count => 3)
+        page.should have_selector(".events > .event", :count => 3)
         # Break the following out to check for name, held dates, blurb
         # and a link to more details.
         page.should have_content(future_event.name)

@@ -7,7 +7,7 @@
 	<meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Booth</title>
+  <title>SMASH!</title>
 
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -20,14 +20,20 @@
 </head>
 <body>
 
-  <header id="global-header" class="row">
-    <div class="twelve columns">
+  <header role="banner" id="header">
+    <div class="container">
       <h1>SMASH! Sydney Manga and Anime Show</h1>
       <a href="#">Visit SMASH! on the web.</a>
     </div>
   </header>
 
-  <%= yield %>
+  <div role="main">
+    <%= yield %>
+  </div>
+
+  <footer role="contentinfo" id="footer">
+    <p>&copy; SMASH Inc.</p>
+  </footer>
 
 </body>
 </html>

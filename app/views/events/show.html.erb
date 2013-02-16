@@ -1,9 +1,14 @@
-<div class="row">
-  <section class="event nine columns">
-    <h1>SMASH! 2013</h1>
-    <img />
+<article class="event event-detail">
+  <img class="thumbnail" alt="" />
+
+  <hgroup>
+    <h1><%= @event.name %></h1>
+    <time datetime="TODO-ISO-DATE">TODO: Formatted dates for sale times and held-at dates</time>
+  </hgroup>
+
+  <section>
+    <%= @event.description %>
   </section>
 
-  <aside class="tickets panel three columns">
-  </aside>
-</div>
+  <aside></aside>
+</article>

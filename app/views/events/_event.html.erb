@@ -1,13 +1,13 @@
-<li class="twelve columns panel">
-  <a class="row">
-    <div class="three columns"><img alt="TODO" /></div>
-    <div class="six columns">
+<article class="event">
+  <%= link_to event_path(event) do %>
+
+    <img class="thumbnail" alt="" />
+
+    <hgroup>
       <h1><%= event.name %></h1>
       <time datetime="TODO-ISO-DATE">TODO: Formatted dates for sale times and held-at dates</time>
       <%= content_tag :p, event.tagline, :class => 'tagline' %>
-    </div>
-    <div class="three columns">
-      <%= event.description %>
-    </div>
-  </a>
-</li>
+    </hgroup>
+
+  <% end %>
+</article>
