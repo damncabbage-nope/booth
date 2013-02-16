@@ -1,6 +1,31 @@
 require 'spec_helper'
 
 describe Event do
+  context "validation" do
+    subject { FactoryGirl.build(:open_event) }
+
+    it "requires sales-open, sales-closed, beginning and end dates to be in order" do
+      # Anchor it a week ago; every other date should follow it.
+      subject.sales_opened_at = 7.days.ago
+
+      valid?(:sales_closed_at, 8.days.ago).should be_false
+      valid?(:sales_closed_at, 2.days.ago).should be_true
+
+      valid?(:began_at, 5.days.ago).should be_false
+      valid?(:began_at, 1.day.ago).should be_true
+
+      valid?(:finished_at, 4.days.ago).should be_false
+      valid?(:finished_at, 2.days.from_now).should be_true
+    end
+
+    # Helpers
+
+    def valid?(attribute, value)
+      subject.send("#{attribute}=", value)
+      subject.valid?
+    end
+  end
+
   context "scopes" do
     let!(:future_event)  { FactoryGirl.create(:future_event) }
     let!(:open_event)    { FactoryGirl.create(:open_event) }

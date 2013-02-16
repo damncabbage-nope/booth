@@ -14,6 +14,9 @@ group :assets do
   gem 'uglifier' #, '>= 1.0.3'
 end
 
+# Models
+gem 'validates_timeliness'
+
 # Front-end
 gem 'jquery-rails'
 
