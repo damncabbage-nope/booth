@@ -5,7 +5,7 @@
 
     <hgroup>
       <h1><%= event.name %></h1>
-      <time datetime="TODO-ISO-DATE">TODO: Formatted dates for sale times and held-at dates</time>
+      <%= content_tag :time, pretty_date_and_time_range(event.began_at, event.finished_at) %>
       <%= content_tag :p, event.tagline, :class => 'tagline' %>
     </hgroup>
 
