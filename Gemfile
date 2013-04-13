@@ -16,6 +16,8 @@ end
 
 # Models
 gem 'validates_timeliness'
+#gem 'valid_email'
+#gem 'money-rails'
 
 # Front-end
 gem 'jquery-rails'
@@ -28,7 +30,12 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'ffaker'
   gem 'launchy'
+  gem 'debugger'
 end
+
+# Serving
+gem 'unicorn'
+gem 'sidekiq'
 
 # Monitoring
 group :development do
