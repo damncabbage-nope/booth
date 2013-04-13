@@ -31,13 +31,20 @@ namespace :dev do
 
   desc "Creates the needed config files for the system to start."
   task :config_files do
-    examples = Dir[File.join(Rails.root, 'config/*.example.yml')]
-    examples.each do |example|
-      target = example.sub(/\.example\.yml\Z/, '.yml')
-      if File.exist? target
-        puts "File already exists: #{File.basename(target)}"
-      else
-        puts `cp -v "#{example}" "#{target}"`
+    examples = {
+      Rails.root.join('config/*.example.yml') => [/\.example\.yml\Z/, '.yml'],
+      Rails.root.join('.env-example')         => [/-example\Z/, ''],
+    }
+
+    examples.each do |file_rules, replacement_rules|
+      files = Dir[file_rules]
+      files.each do |example|
+        target = example.sub *replacement_rules
+        if File.exist? target
+          puts "File already exists: #{File.basename(target)}"
+        else
+          puts `cp -v "#{example}" "#{target}"`
+        end
       end
     end
   end
