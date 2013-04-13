@@ -27,6 +27,7 @@ group :development, :test do
   gem 'konacha' # Mocha, Chai
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'capybara-webkit'
   gem 'factory_girl_rails'
   gem 'ffaker'
   gem 'launchy'
