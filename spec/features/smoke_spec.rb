@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Smoke Test", :js => true do
-  it "lets users purchase tickets" do
+  pending "lets users purchase tickets" do
     # Setup
     event = FactoryGirl.create(:open_event)
 
