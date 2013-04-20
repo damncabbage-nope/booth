@@ -17,7 +17,6 @@ end
 # Models
 gem 'validates_timeliness'
 gem 'valid_email'
-#gem 'money-rails'
 
 # Front-end
 gem 'jquery-rails'
