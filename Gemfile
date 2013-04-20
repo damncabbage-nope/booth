@@ -16,8 +16,7 @@ end
 
 # Models
 gem 'validates_timeliness'
-#gem 'valid_email'
-#gem 'money-rails'
+gem 'valid_email'
 
 # Front-end
 gem 'jquery-rails'
@@ -32,6 +31,11 @@ group :development, :test do
   gem 'ffaker'
   gem 'launchy'
   gem 'debugger'
+
+  # Guard (auto-test reloading)
+  gem 'guard-rspec'
+  gem 'rb-inotify', :require => false # Linux
+  gem 'rb-fsevent', :require => false # OS X
 end
 
 # Serving
