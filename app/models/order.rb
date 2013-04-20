@@ -7,5 +7,5 @@ class Order < ActiveRecord::Base
   validates :line_items, :length => {:minimum => 1}
 
   ### Associations ###
-  has_many :line_items, :validate => true
+  has_many :line_items, :validate => true, :inverse_of => :order
 end
