@@ -26,16 +26,20 @@ ActiveRecord::Schema.define(:version => 20130420162442) do
   end
 
   create_table "line_items", :force => true do |t|
-    t.integer  "order_id"
-    t.integer  "product_id"
-    t.integer  "details_id"
-    t.decimal  "price",      :precision => 8, :scale => 2
+    t.integer  "order_id",                                 :null => false
+    t.integer  "product_id",                               :null => false
+    t.integer  "details_id",                               :null => false
+    t.decimal  "price",      :precision => 8, :scale => 2, :null => false
     t.datetime "created_at",                               :null => false
     t.datetime "updated_at",                               :null => false
   end
 
+  add_index "line_items", ["details_id"], :name => "index_line_items_on_details_id"
+  add_index "line_items", ["order_id"], :name => "index_line_items_on_order_id"
+  add_index "line_items", ["product_id"], :name => "index_line_items_on_product_id"
+
   create_table "orders", :force => true do |t|
-    t.string   "email"
+    t.string   "email",      :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
