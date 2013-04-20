@@ -4,7 +4,7 @@
 #       have LineItem switch between them with STI.
 
 class TicketType < ActiveRecord::Base
-  set_table_name :products
+  self.table_name = :products
 
   ### Validations ###
   validates :price, :presence => true, :numericality => { :greater_than_or_equal_to => 0 }
@@ -12,5 +12,5 @@ class TicketType < ActiveRecord::Base
 
   ### Associations ###
   belongs_to :event
-  has_many :line_items
+  has_many :line_items, :inverse_of => :product
 end
