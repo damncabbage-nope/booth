@@ -14,8 +14,8 @@ class LineItem < ActiveRecord::Base
   # These are set up to be able to be switched to STI and Polymorphic
   # relations later, if/when we get things like merchandise as
   # separate types of product.
-  belongs_to :product, :class_name => "TicketType", :validate => true, :inverse_of => :line_items
-  belongs_to :details, :class_name => "TicketDetails", :validate => true, :inverse_of => :line_item
+  belongs_to :product, :class_name => "TicketType", :validate => true
+  belongs_to :details, :class_name => "TicketDetails", :validate => true
 
   # Stubbed out for later use (if necessary).
   def quantity
