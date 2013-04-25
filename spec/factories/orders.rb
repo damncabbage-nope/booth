@@ -1,6 +1,11 @@
 FactoryGirl.define do
   factory :order do
     email { Faker::Internet.email }
+
+    # Requires a customer
+    after :build do |order, ctx|
+      order.customer ||= FactoryGirl.build(:customer)
+    end
   end
 
   trait :with_line_items do
