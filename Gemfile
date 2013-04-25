@@ -19,6 +19,9 @@ gem 'validates_timeliness'
 gem 'valid_email'
 gem 'state_machine'
 
+# Authentication
+gem 'warden'
+
 # Front-end
 gem 'jquery-rails'
 
