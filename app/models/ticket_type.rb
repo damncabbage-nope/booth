@@ -6,6 +6,9 @@
 class TicketType < ActiveRecord::Base
   self.table_name = :products
 
+  ### Attributes ###
+  attr_accessible :name, :price
+
   ### Validations ###
   validates :price, :presence => true, :numericality => { :greater_than_or_equal_to => 0 }
   validates :name, :presence => true

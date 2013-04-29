@@ -14,9 +14,10 @@ class Event < ActiveRecord::Base
   validates_datetime :began_at, :after => :sales_closed_at
   validates_datetime :finished_at, :after => :began_at
 
+  ### Associations ###
+  has_many :products, :class_name => 'TicketType'
 
   ### Scopes
-
   def self.active(now=Time.now)
     where('finished_at > ?', now)
   end
