@@ -23,12 +23,14 @@
     </div>
   </header>
 
-  <div role="main">
+  <div role="main" id="main">
     <%= yield %>
   </div>
 
   <footer role="contentinfo" id="footer">
-    <p>&copy; SMASH Inc.</p>
+    <div class="container">
+      <p>&copy; SMASH Inc.</p>
+    </div>
   </footer>
 
   <%= javascript_include_tag "application" %>

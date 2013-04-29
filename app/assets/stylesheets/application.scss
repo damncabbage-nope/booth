@@ -4,3 +4,39 @@
 
 @import "foundation_and_overrides";
 
+#header {
+  .container {
+    @extend .row;
+    padding-bottom: 1em;
+  }
+  color: $body-bg;
+  background-color: $body-font-color;
+  background-image: url('http://joinus.smash.org.au/profiles/smash2013_joinus/themes/smash_minisite_theme/images/blackbg_tiled.png');
+  background-repeat: repeat;
+  h1 { color: $panel-bg; }
+  a { color: #70CEE2; }
+}
+
+#footer {
+  .container { @extend .row; }
+}
+
+// #main
+article.event {
+  @extend .row;
+  margin-top: 1.75em;
+
+  .panel {
+    @extend .columns;
+    @extend .large-8;
+    @extend .radius;
+    padding-bottom: 1.75em;
+  }
+
+  aside {
+    @extend .columns;
+    @extend .large-4;
+
+    select { width: 50%; }
+  }
+}

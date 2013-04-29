@@ -1,14 +1,24 @@
 <article class="event event-detail">
-  <img class="thumbnail" alt="" />
+  <!--<img class="thumbnail" alt="" />-->
 
-  <hgroup>
-    <h1><%= @event.name %></h1>
-    <%= content_tag :time, pretty_date_and_time_range(@event.began_at, @event.finished_at) %>
-  </hgroup>
+  <div class="panel">
+    <hgroup>
+      <h2><%= @event.name %></h2>
+      <%= content_tag :time, pretty_date_and_time_range(@event.began_at, @event.finished_at) %>
+    </hgroup>
 
-  <section>
-    <%= @event.description %>
-  </section>
+    <section>
+      <%= @event.description %>
+    </section>
+  </div>
 
-  <aside></aside>
+  <aside>
+    <h3>Book Now</h3>
+    <p>Add tickets to your cart:</p>
+    <% @event.products.each do |product| %>
+      <h5><%= product.name %></h5>
+      <%= select_tag('todo', options_for_select(1..20)) %> x <%= number_to_currency(product.price) %>
+      <button class="button">Add to your cart</button>
+    <% end %>
+  </aside>
 </article>

@@ -4,7 +4,7 @@
     <img class="thumbnail" alt="" />
 
     <hgroup>
-      <h1><%= event.name %></h1>
+      <h2><%= event.name %></h2>
       <%= content_tag :time, pretty_date_and_time_range(event.began_at, event.finished_at) %>
       <%= content_tag :p, event.tagline, :class => 'tagline' %>
     </hgroup>
