@@ -4,12 +4,14 @@ class Order < ActiveRecord::Base
 
   ### Validations ###
   validates :email, :presence => true, :email => true
+  validates :customer, :presence => true
   validates :line_items, :length => {
     :minimum => 1,
     :message => "need at least one item in the order",
   }
 
   ### Associations ###
+  belongs_to :customer, :inverse_of => :orders
   has_many :line_items, :validate => true, :inverse_of => :order
 
   ### State Machine ###
